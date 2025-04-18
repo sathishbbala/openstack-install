@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block body %}
+  <h3 class='text-center text-muted mb-3'>Student Registration Application </h3>
+  <p class='text-right'><a href='{{url_for("add_user")}}' class='btn btn-success '>+Add User</a></p>
+  <table class='table table-bordered'>
+    <thead>
+      <th>Registration Number</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email Address</th>
+      <th>Phone Number</th>
+    </thead>
+    <tbody>
+      {% for row in datas %}
+        <tr>
+          <td>{{row.id}}</td>
+          <td>{{row.first_name}}</td>
+          <td>{{row.last_name}}</td>
+          <td>{{row.email_address}}</td>
+          <td>{{row.phone_number}}</td>
+          <td><a href='{{url_for("edit_user",id=row["id"])}}' class='btn btn-primary'>Edit</a></td>
+          <td><a href='{{url_for("delete_user",id=row["id"])}}' class='btn btn-danger' onclick='return confirm("Are You Sure")'>Delete</a></td>
+        </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+{% endblock %}
