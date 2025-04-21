@@ -74,7 +74,7 @@ D. Setup the timezone using the timedatectl command
 openstack@openstack:~$ timedatectl set-timezone Asia/Kolkata
 ==== AUTHENTICATING FOR org.freedesktop.timedate1.set-timezone ===
 Authentication is required to set the system timezone.
-Authenticating as: Sathish Balasubramaniam (openstack)
+Authenticating as:  (openstack)
 Password:
 ==== AUTHENTICATION COMPLETE ===
 openstack@openstack:~$ date
