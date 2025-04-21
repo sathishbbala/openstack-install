@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 {% block body %}
   <h3 class='text-center text-muted mb-3'>Student Registration Application </h3>
-  <p class='text-right'><a href='{{url_for("add_user")}}' class='btn btn-success '>+Add User</a></p>
+  <p class='text-right'><a href='{{url_for("add_student")}}' class='btn btn-success '>+Add Student</a></p>
   <table class='table table-bordered'>
     <thead>
       <th>Registration Number</th>
@@ -18,8 +18,8 @@
           <td>{{row.last_name}}</td>
           <td>{{row.email_address}}</td>
           <td>{{row.phone_number}}</td>
-          <td><a href='{{url_for("edit_user",id=row["id"])}}' class='btn btn-primary'>Edit</a></td>
-          <td><a href='{{url_for("delete_user",id=row["id"])}}' class='btn btn-danger' onclick='return confirm("Are You Sure")'>Delete</a></td>
+          <td><a href='{{url_for("edit_student",id=row["id"])}}' class='btn btn-primary'>Edit</a></td>
+          <td><a href='{{url_for("delete_student",id=row["id"])}}' class='btn btn-danger' onclick='return confirm("Are You Sure")'>Delete</a></td>
         </tr>
       {%endfor%}
     </tbody>
