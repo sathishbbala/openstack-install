@@ -10,6 +10,9 @@ Memory - 12G
 Disk size - 60G
 Network Adapter - NAT
 
+Port Forwarding: 
+<laptop-ip> Port 22/80/8080 -> 10.0.2.15 port 22/80/8080
+
 B. Once the OS installation is completed, verify the interface, internet access, routing on the VM. 
 **DO NOT run “sudo apt update && sudo apt upgrade” after the OS installation is successful**. This is not needed as openstack installation will update the packages as per the installation requirements. 
 ```
