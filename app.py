@@ -13,8 +13,8 @@ def index():
     data=cur.fetchall()
     return render_template("index.html",datas=data)
 
-@app.route("/add_user",methods=['POST','GET'])
-def add_user():
+@app.route("/add_student",methods=['POST','GET'])
+def add_student():
     if request.method=='POST':
         first_name=request.form['first_name']
         last_name=request.form['last_name']
@@ -26,10 +26,10 @@ def add_user():
         con.commit()
         flash('Record Added','success')
         return redirect(url_for("index"))
-    return render_template("add_user.html")
+    return render_template("add_student.html")
 
-@app.route("/edit_user/<string:id>",methods=['POST','GET'])
-def edit_user(id):
+@app.route("/edit_student/<string:id>",methods=['POST','GET'])
+def edit_student(id):
     if request.method=='POST':
         first_name=request.form['first_name']
         last_name=request.form['last_name']
@@ -46,10 +46,10 @@ def edit_user(id):
     cur=con.cursor()
     cur.execute("select * from students where ID=?",(id,))
     data=cur.fetchone()
-    return render_template("edit_user.html",datas=data)
+    return render_template("edit_student.html",datas=data)
 
-@app.route("/delete_user/<string:id>",methods=['GET'])
-def delete_user(id):
+@app.route("/delete_student/<string:id>",methods=['GET'])
+def delete_student(id):
     con=sql.connect("/home/debian/crud_app/students.db")
     cur=con.cursor()
     cur.execute("delete from students where ID=?",(id,))
