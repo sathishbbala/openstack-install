@@ -254,7 +254,8 @@ T. Download and copy the scripts from github repo to the openstack instance. Cre
 sudo cp -p crud-app /etc/nginx/sites-available/crud-app
 sudo ln -s /etc/nginx/sites-available/crud-app /etc/nginx/sites-enabled/
 sudo nginx -t 
-sudo systemctl restart nginx 
+sudo systemctl restart nginx
+mkdir templates && mv *.html templates/. 
 ```
 
 T. Start the application using the following command: 
