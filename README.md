@@ -274,7 +274,11 @@ Press CTRL+C to quit
  * Debugger PIN: 749-044-597
 ```
 
-U. Access the application at the URL - http://<laptop-ip>:8080
+U. Access the application at the URL: 
+```
+http://<laptop-ip>:8080
+```
+
 
 
 
